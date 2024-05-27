@@ -1,0 +1,4 @@
+CREATE TABLE public.user (
+    id BIGINT  NOT NULL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL
+);
