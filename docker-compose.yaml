@@ -3,7 +3,6 @@ version: '3.9'
 services:
   flyway:
     image: redgate/flyway
-    #command: -licenseKey="FL01..." -url=jdbc:postgresql://db:5432/coupon -schemas=myschema -user=root -password=P@ssw0rd -connectRetries=60 migrate
     command: -configFiles=/flyway/conf/flyway.config -locations=filesystem:/flyway/sql -connectRetries=60 migrate
     volumes:
       - ./conf/flyway.conf:/flyway/conf/flyway.config
